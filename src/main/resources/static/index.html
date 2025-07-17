@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat App</title>
+  <!-- Đảm bảo main.css nằm cùng thư mục với index.html -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!-- Trang ĐĂNG NHẬP -->
+<div id="login-page">
+  <div class="form-container">
+    <h2>Đăng nhập</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required placeholder="you@example.com">
+      </div>
+      <div class="input-group">
+        <label for="password">Mật khẩu</label>
+        <input type="password" id="password" name="password" required placeholder="••••••••">
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- Trang CHAT (ẩn ban đầu) -->
+<div id="chat-page" class="hidden">
+  <div class="chat-container">
+    <ul id="messageArea" class="message-area"></ul>
+    <div class="input-area">
+      <input type="text" id="message" placeholder="Type a message..." autocomplete="off">
+      <button id="send" class="btn">Send</button>
+    </div>
+  </div>
+</div>
+
+<!-- SockJS & STOMP client -->
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.1/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+<!-- Main JS -->
+<script src="js/main.js"></script>
+</body>
+</html>
